@@ -102,7 +102,7 @@ pipeline{
           when { expression {  params.action == 'create' } }
           steps{
             script{
-                 sh 'curl -uadmin:Admin123 -X PUT "http://13.234.186.168:8082/artifactory/example-repo-local/kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar" -T /var/lib/jenkins/workspace/java-3.0/target/kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar'
+                 sh 'curl -u admin:Admin123 -X PUT "http://13.234.186.168:8082/artifactory/example-repo-local/kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar" -T /var/lib/jenkins/workspace/java-3.0/target/kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar'
 
                 //curl -uUSERNAME:PASSWORD -X PUT "https://<YOUR_ARTIFACTORY_URL>/artifactory/<REPOSITORY_KEY>/<PATH>/<FILE_NAME>.jar" -T /path/to/your/local/file.jar
 
